@@ -11,6 +11,10 @@ group :development, :test do
 	gem 'sqlite3'
 end
 
+gem 'devise'
+
+gem 'simple_form'
+
 gem 'rails_12factor', group: :production
 
 gem 'bootstrap-sass', '~> 2.2.2.0'

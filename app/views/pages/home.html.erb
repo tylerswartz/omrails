@@ -1,11 +1,15 @@
-<div class="hero-unit">
-<h2>Welcome to my first website</h2>
-<p>
-	I'm learning with <%= link_to "One Month Rails", "http://onemonthrails.com" %>. You have to start somewhere...
-</p>
-<p>
-	If you are interested in learning Rails, you can <%= link_to "Sign Up Here", "#", class: "btn btn-inverse btn-default" %>
-</p>
-<h2>"Be So Good They Can't Ignore You"</h2>
-<h3>-Steve Martin</h3>
-</div>
+<% if user_signed_in? %>
+  	<h1>You are logged in!</h1>
+<% else %>
+	<div class="hero-unit">
+	<h2>Welcome to my first website</h2>
+	<p>
+		I'm learning with <%= link_to "One Month Rails", "http://onemonthrails.com" %>. You have to start somewhere...
+	</p>
+	<p>
+		If you are interested in learning Rails, you can <%= link_to "Sign Up Here", new_user_registration_path, class: "btn btn-inverse btn-default" %>
+	</p>
+	<h2>"Be So Good They Can't Ignore You"</h2>
+	<h3>-Steve Martin</h3>
+	</div>
+<% end %>
